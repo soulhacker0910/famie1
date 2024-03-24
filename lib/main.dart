@@ -59,6 +59,7 @@ class MyHomePageState extends State<MyHomePage> {
                     color: Colors.green,
                   ),
                 ),
+
                 TextFormField(
                   controller: usernameController,
                   decoration: const InputDecoration(
@@ -72,6 +73,7 @@ class MyHomePageState extends State<MyHomePage> {
                     return null;
                   },
                 ),
+
                 TextFormField(
                   controller: passwordController,
                   obscureText: true,
@@ -86,6 +88,7 @@ class MyHomePageState extends State<MyHomePage> {
                     return null;
                   },
                 ),
+                
                 const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {

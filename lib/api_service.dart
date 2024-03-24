@@ -3,7 +3,9 @@ import 'package:http/http.dart' as http;
 import 'package:logger/logger.dart';
 
 class ApiService {
-  final String baseUrl = 'http://10.0.2.2:3000'; // Use 'localhost' for emulator or '10.0.2.2' for Android emulator to connect to your local machine
+  // Make sure to adjust the baseUrl to match your server's address and port
+  // If testing on an emulator, you might use '10.0.2.2' for Android to connect to your local development server
+  final String baseUrl = 'http://localhost:3000';
   final Logger logger = Logger();
 
   Future<bool> signUp(String email, String username, String password) async {
@@ -11,15 +13,14 @@ class ApiService {
     try {
       final response = await http.post(
         url,
-        headers: <String, String>{
-          'Content-Type': 'application/json',
-        },
+        headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
           'email': email,
           'username': username,
           'password': password,
         }),
       );
+      
 
       if (response.statusCode == 201) {
         logger.d('Signup successful');
@@ -39,9 +40,7 @@ class ApiService {
     try {
       final response = await http.post(
         url,
-        headers: <String, String>{
-          'Content-Type': 'application/json',
-        },
+        headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
           'email': email,
           'password': password,

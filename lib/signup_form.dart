@@ -45,9 +45,9 @@ void _onSignupPressed() {
         centerTitle: true,
       ),
     body: SingleChildScrollView(
-      padding: appMargin, // Assuming this is defined in your theme.dart
+      padding: appMargin, 
       child: Form(
-        key: _formKey, // Use the form key here
+        key: _formKey, 
         child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -67,9 +67,8 @@ void _onSignupPressed() {
                   labelText: 'Email',
                   hintText: 'Enter your email',
                 ),
-                autovalidateMode: AutovalidateMode.onUserInteraction, // Add this line
+                autovalidateMode: AutovalidateMode.onUserInteraction,
                 validator: (value) {
-                  // Add your validation logic here.
                   if (value == null || value.isEmpty) {
                     return 'Please enter an email';
                   } else if (!value.contains('@')) {
@@ -90,7 +89,7 @@ void _onSignupPressed() {
                 if (value == null || value.isEmpty) {
                   return 'Please enter a username';
                 }
-                // Add more specific validation for the username if needed
+              
                 return null;
               },
             ),
@@ -110,7 +109,7 @@ void _onSignupPressed() {
                 } else if (value.length < 8) {
                   return 'Password must be at least 8 characters';
                 }
-                // Add more specific validation for the password if needed
+                
                 return null;
               },
             ),

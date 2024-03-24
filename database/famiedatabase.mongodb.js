@@ -1,5 +1,5 @@
 // MongoDB Playground
-use('Famie');
+use('famie');
 
 // Initialize the user collection for signup and login actions
 db.createCollection('famie_reg');

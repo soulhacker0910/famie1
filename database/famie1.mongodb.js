@@ -1,5 +1,5 @@
 
-
+//connectionString: mongodb+srv://2022cetevivaresps:qqVJNQxQyjOOMREr@cluster0.4c8r3ww.mongodb.net/
 const database = 'famie';
 const collection1 = 'famie_reg';
 
